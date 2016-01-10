@@ -1,0 +1,19 @@
+<head>
+  <title>GroundDB multi-tab issue</title>
+</head>
+
+<body>
+  <h1>GroundDB multi-tab issue</h1>
+  {{>hello}}
+</body>
+
+<template name="hello">
+  <p>To reproduce the error: </p>
+  <p>Click Refresh with two Chrome windows open, it will remove the table below.</p>
+  <p>The expected behavior: try with Firefox or a Chrome "incognito mode" in one window. The table refreshes as expected.</p>
+  <p> *reset the meteor if no error is reproduced.
+
+  <button id="broken"> Refresh  </button>
+  {{> reactiveTable collection=myCollection showNavigation='never'}}
+
+</template>
